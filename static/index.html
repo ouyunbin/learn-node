@@ -7,6 +7,44 @@
     <title>实现全栈JavaScript开发</title>
 </head>
 <body>
-    ddd
+    <div id="app">
+        <p>Hello,{{name}}</p>
+        <p>You are {{age}} years old!</p>
+        <form action="#" method="post">
+            <div class="input-form">
+                <label for="name">name：</label>
+                <input type="text" v-model="name"  id="name">
+            </div>
+            <div class="input-form">
+                <label for="email">name：</label>
+                <input type="email" v-model="email"  id="email">
+            </div>
+        </form>
+    </div>
+    <script src="/static/js/vue.min.js"></script>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                name:'Robot',
+                email:'',
+                age:15
+            },
+            watch:{
+                name(val){
+                    console.log(val);
+                },
+                email(val){
+                    console.log(val);
+                }
+            },
+            methods:{
+
+            },
+            created(){
+
+            }
+        })
+    </script>
 </body>
 </html>
